@@ -1,0 +1,21 @@
+# Python venvs
+.venv/
+env/
+venv/
+__pycache__/
+
+# Editor / OS
+*.swp
+*.swo
+*.log
+.DS_Store
+
+# Large model files (optional but recommended)
+*.engine
+*.pt
+*.onnx
+
+# Run outputs
+runs/
+*.mp4
+*.avi

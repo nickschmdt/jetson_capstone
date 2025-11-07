@@ -1,0 +1,1 @@
+deb [signed-by=/usr/share/keyrings/nv-tensorrt-local-tegra-CAAF3701-keyring.gpg] file:///var/nv-tensorrt-local-tegra-repo-ubuntu2204-10.3.0-cuda-12.5 /

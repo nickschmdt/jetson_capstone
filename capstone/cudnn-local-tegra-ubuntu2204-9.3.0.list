@@ -1,0 +1,1 @@
+deb [signed-by=/usr/share/keyrings/cudnn-local-tegra-A614AD38-keyring.gpg] file:///var/cudnn-local-tegra-repo-ubuntu2204-9.3.0 /
