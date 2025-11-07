@@ -1,4 +1,4 @@
-#define TRIG_PIN 9                                                                                                                                                      PIN 9
+#define TRIG_PIN 9
 #define ECHO_PIN 10
 #define BUTTON_PIN 13  // Using the built-in pull-up resistor
 
