@@ -238,30 +238,7 @@ def main():
     # ---------- State ----------
     last_caption = ""
     last_speak_time = 0.0
-    frame_idx = 0
-
-
-    # --- Check Arduino button press before main loop ---
-    if arduino is not None and arduino.in_waiting > 0:
-        line = arduino.readline().decode('utf-8').strip()
-        
-        if line.startswith("BUTTON_PRESSED:"):
-            # Example: Arduino sends "BUTTON_PRESSED: 45.2"
-            try:
-                distance = float(line.split(":")[1].strip())
-                message = f"{distance:.0f} centimeters away."
-                print(f"[BUTTON] Speaking distance: {message}")
-
-                # Interrupt TTS queue for priority speech
-                if tts_queue is not None:
-                    # Optional: clear pending captions
-                    with tts_queue.mutex:
-                        tts_queue.queue.clear()
-                    tts_queue.put_nowait(message)
-
-            except Exception as e:
-                print(f"[WARN] Bad button data: {line} ({e})")
-    
+    frame_idx = 0 
 
     # -------------------- Main loop -------------------- #
 
